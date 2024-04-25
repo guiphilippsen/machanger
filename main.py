@@ -22,9 +22,9 @@ elif trigger == '2':
     interface = input("Select your Enternet Interface: ")
     print("Generating your new MAC Address...")
     time.sleep(1)
-    subprocess.call("ifconfig" + interface + "down")
-    subprocess.call("ifconfig" + interface + "hw ether" + generate_mac_address)
-    subprocess.call("ifconfig" + interface + "up")
+    subprocess.call("ifconfig " + interface + " down")
+    subprocess.call("ifconfig " + interface + " hw ether" + generate_mac_address)
+    subprocess.call("ifconfig " + interface + " up")
     print("Your new MAC Address is: " + generate_mac_address)
 else: 
     print("Invalid option. Please select a valid option.")
